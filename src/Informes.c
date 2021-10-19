@@ -123,10 +123,10 @@ int inf_ListarArcades(Arcade* arcadeList, int arcadeLen, Salon* listSalon, int l
 		switch(listSalon[id].tipo)
 		{
 		case 0:
-			printf("Nombre del salon: %s || Tipo: LOCAL\n\n", listSalon[id].nombreSalon);
+			printf("Nombre del salon: %s, Tipo: LOCAL\n\n", listSalon[id].nombreSalon);
 			break;
 		case 1:
-			printf("Nombre del salon: %s || Tipo: SHOPPING\n\n", listSalon[id].nombreSalon);
+			printf("Nombre del salon: %s, Tipo: SHOPPING\n\n", listSalon[id].nombreSalon);
 			break;
 		}
 
