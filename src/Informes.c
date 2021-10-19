@@ -130,7 +130,7 @@ int inf_ListarArcades(Arcade* arcadeList, int arcadeLen, Salon* listSalon, int l
 			break;
 		}
 
-		puts("Juegos");
+		printf("Juegos");
 		for(i = 0; i < arcadeLen; i++)
 		{
 			if(arcadeList[i].flagEmpty == 0 && arcadeList[i].idSalon == id)
