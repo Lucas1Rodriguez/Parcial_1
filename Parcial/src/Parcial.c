@@ -83,7 +83,14 @@ int main()
 					// 2) INCORPORAR ARCADE
 					if(controller_addArcade(listaArcades) == 0)
 					{
-						printf("Arcade agregado con exito");
+						if(controller_saveAsText("arcades.csv", listaArcades)==0)
+						{
+							printf("\nArcade agregado y guardado con exito");
+						}
+						else
+						{
+							printf("\nNo se pudo guardar el arcade");
+						}
 					}
 					else
 					{
@@ -94,7 +101,14 @@ int main()
 					// 3) MODIFICAR ARCADE
 						if(controller_editArcade(listaArcades) == 0)
 						{
-							printf("Arcade modificado con exito");
+							if(controller_saveAsText("arcades.csv", listaArcades)==0)
+							{
+								printf("\nArcade modificado y guardado con exito");
+							}
+							else
+							{
+								printf("\nNo se pudo guardar el arcade");
+							}
 						}
 						else
 						{
@@ -105,11 +119,14 @@ int main()
 					// 4) ELIMINAR ARCADE
 					if(controller_removeArcade(listaArcades) == 0)
 					{
-						printf("Arcade borrado con exito");
-					}
-					else
-					{
-						printf("No se pudo borrar el arcade");
+						if(controller_saveAsText("arcades.csv", listaArcades)==0)
+						{
+							printf("\nArcade borrado y lista guardada con exito");
+						}
+						else
+						{
+							printf("\nNo se pudo guardar el arcade");
+						}
 					}
 					break;
 				case 5:

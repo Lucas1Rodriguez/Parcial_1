@@ -139,6 +139,7 @@ int controller_removeArcade(LinkedList* pArrayListArcade)
 	int auxId;
 	int idBuscado;
 	int retorno = -1;
+	int opcion;
 	for(int i = 0; i<ll_len(pArrayListArcade);i++)
 	{
 		controller_ListArcade(pArrayListArcade);
@@ -146,8 +147,20 @@ int controller_removeArcade(LinkedList* pArrayListArcade)
 		if(utn_getNumeroInt(&idBuscado,"Ingrese un id a eliminar","Error. No se encontro el id",1,ll_len(pArrayListArcade),3) == 0)
 		{
 			auxId = Controller_buscarPorId(pArrayListArcade, ll_len(pArrayListArcade), idBuscado);
-			ll_remove(pArrayListArcade,auxId);
-			retorno = 0;
+			if(utn_getNumeroInt(&opcion,"Seguro quiere eliminar? \n1)Si \n2)No\n","Error.",1,2,3) == 0)
+			{
+				switch(opcion)
+				{
+					case 1:
+						ll_remove(pArrayListArcade,auxId);
+						retorno = 0;
+						break;
+					case 2:
+						printf("No se elimino el arcade");
+						break;
+				}
+
+			}
 			break;
 		}
 	}

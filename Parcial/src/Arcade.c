@@ -5,7 +5,7 @@
 #include "utn_biblioteca.h"
 #include "Arcade.h"
 #include "Validacion.h"
-#define NOMBRE_LEN 63
+#define CHARS_LEN 63
 
 static int getFieldToModify(int* selectedField);
 
@@ -71,7 +71,7 @@ int arcade_setNacionalidad(Arcade* this,char* nacionalidad)
     int retorno=1;
     if(this!=NULL &&  nacionalidad!=NULL)
     {
-        strncpy(this->nacionalidad,nacionalidad,NOMBRE_LEN);
+        strncpy(this->nacionalidad,nacionalidad,CHARS_LEN);
 
         retorno=0;
     }
@@ -83,7 +83,7 @@ int arcade_getNacionalidad(Arcade* this,char* nacionalidad)
     int retorno=1;
     if(this!=NULL)
     {
-        strncpy(nacionalidad,this->nacionalidad,NOMBRE_LEN);
+        strncpy(nacionalidad,this->nacionalidad,CHARS_LEN);
         retorno=0;
     }
     return retorno;
@@ -94,7 +94,7 @@ int arcade_setTipoSonido(Arcade* this,char* tipo)
 	 int retorno=1;
 	if(this!=NULL && tipo!=NULL)
 	{
-		strncpy(this->tipoSonido,tipo,NOMBRE_LEN);
+		strncpy(this->tipoSonido,tipo,CHARS_LEN);
 
 		retorno=0;
 	}
@@ -107,7 +107,7 @@ int arcade_getTipoSonido(Arcade* this,char* tipo)
 	int retorno=1;
 	if(this!=NULL && tipo!=NULL)
 	{
-		strncpy(tipo,this->tipoSonido,NOMBRE_LEN);
+		strncpy(tipo,this->tipoSonido,CHARS_LEN);
 		retorno=0;
 	}
 	return retorno;
@@ -162,7 +162,7 @@ int arcade_setSalon(Arcade* this,char* salon)
     int retorno=1;
     if(this!=NULL && salon!=NULL)
     {
-        strncpy(this->salon,salon,NOMBRE_LEN);
+        strncpy(this->salon,salon,CHARS_LEN);
 
         retorno=0;
     }
@@ -174,7 +174,7 @@ int arcade_getSalon(Arcade* this,char* salon)
     int retorno=1;
     if(this!=NULL && salon!=NULL)
     {
-        strncpy(salon,this->salon,NOMBRE_LEN);
+        strncpy(salon,this->salon,CHARS_LEN);
         retorno=0;
     }
     return retorno;
@@ -187,7 +187,7 @@ int arcade_setJuego(Arcade* this,char* juego)
     if(this!=NULL && juego!=NULL)
     {
     	strMinuscula(juego);
-        strncpy(this->juego,juego,NOMBRE_LEN);
+        strncpy(this->juego,juego,CHARS_LEN);
 
         retorno=0;
     }
@@ -199,7 +199,7 @@ int arcade_getJuego(Arcade* this,char* juego)
     int retorno=1;
     if(this!=NULL && juego!=NULL)
     {
-        strncpy(juego,this->juego,NOMBRE_LEN);
+        strncpy(juego,this->juego,CHARS_LEN);
         retorno=0;
     }
     return retorno;
@@ -237,10 +237,10 @@ int arcade_modificar(Arcade* this, int indice)
 	int retorno=-1;
 	int auxCantJug;
 	int auxFichasMax;
-	char auxTipoSonido[NOMBRE_LEN];
-	char auxNacionalidad[NOMBRE_LEN];
-	char auxSalon[NOMBRE_LEN];
-	char auxJuego[NOMBRE_LEN];
+	char auxTipoSonido[CHARS_LEN];
+	char auxNacionalidad[CHARS_LEN];
+	char auxSalon[CHARS_LEN];
+	char auxJuego[CHARS_LEN];
 	int opcion;
 	if(this !=NULL)
 	{
@@ -309,10 +309,10 @@ int arcade_List(Arcade* this)
 	int retorno = -1;
 	int auxCantJug;
 	int auxFichasMax;
-	char auxTipoSonido[NOMBRE_LEN];
-	char auxNacionalidad[NOMBRE_LEN];
-	char auxSalon[NOMBRE_LEN];
-	char auxJuego[NOMBRE_LEN];
+	char auxTipoSonido[CHARS_LEN];
+	char auxNacionalidad[CHARS_LEN];
+	char auxSalon[CHARS_LEN];
+	char auxJuego[CHARS_LEN];
 	int auxid;
 		if(arcade_getNacionalidad(this,auxNacionalidad)!=-1)
 		{
@@ -352,10 +352,10 @@ int arcade_imprimir(Arcade* auxArcade, int indice)
 	int auxId;
 	int auxCantJug;
 	int auxFichasMax;
-	char auxTipoSonido[NOMBRE_LEN];
-	char auxNacionalidad[NOMBRE_LEN];
-	char auxSalon[NOMBRE_LEN];
-	char auxJuego[NOMBRE_LEN];
+	char auxTipoSonido[CHARS_LEN];
+	char auxNacionalidad[CHARS_LEN];
+	char auxSalon[CHARS_LEN];
+	char auxJuego[CHARS_LEN];
 
 	arcade_getId(auxArcade,&auxId);
 	arcade_getNacionalidad(auxArcade,auxNacionalidad);
