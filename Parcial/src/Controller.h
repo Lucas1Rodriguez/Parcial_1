@@ -1,0 +1,14 @@
+int controller_loadFromText(char* path , LinkedList* pArrayListArcade);
+int controller_addArcade(LinkedList* pArrayListArcade);
+int controller_editArcade(LinkedList* pArrayListArcade);
+int controller_removeArcade(LinkedList* pArrayListArcade);
+int controller_ListArcade(LinkedList* pArrayListArcade);
+int controller_sortArcade(LinkedList* pArrayListArcade);
+int controller_saveAsText(char* path , LinkedList* pArrayListArcade);
+int Controller_buscarPorId(LinkedList* pArrayListArcade,int len, int IdBuscado);
+int OrdenamientoPorNombre(void* juegoZ, void* juegoX);
+int controller_ArchivoJuegos(char* path, LinkedList* pArrayListArcade);
+int controller_FilterMulti(LinkedList* pArrayalistArcade);
+int archivoMultijugador(void* pArrayalistArcade);
+int actualizarCantFichas(LinkedList* pArraylistaArcade);
+void DuplicarFichas(void* pArrayalistArcade);
